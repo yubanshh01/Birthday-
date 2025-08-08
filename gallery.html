@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aastha Didi - Birthday Gallery</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+      min-height: 100vh;
+      color: #333;
+      overflow-x: hidden;
+    }
+    nav {
+      width: 100%;
+      background: rgba(255,255,255,0.8);
+      padding: 15px 0;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+      text-align: center;
+      position: sticky; top: 0;
+    }
+    nav a {
+      margin: 0 24px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #613a88;
+      font-size: 1.2em;
+      letter-spacing: 1px;
+      transition: color 0.2s;
+    }
+    nav a:hover {
+      color: #ea38ec;
+      text-shadow: 0 0 8px #ea38ec88;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2.5em auto;
+      padding: 2.5em;
+      background: rgba(255,255,255,0.90);
+      border-radius: 32px;
+      box-shadow: 0 10px 44px #ea38ec22;
+    }
+    .gallery {
+      display: grid;
+      gap: 28px;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      margin-top: 22px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 20px;
+      min-height: 300px;
+      object-fit: cover;
+      box-shadow: 0 4px 44px #be33fc2e;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .gallery img:hover {
+      transform: scale(1.045);
+      box-shadow: 0 8px 64px #ea38ec81;
+    }
+    @media (max-width: 480px) {
+      .gallery img {
+        width: 50vw;
+        max-width: 240px;
+        min-height: auto;
+      }
+    }
+    ::-webkit-scrollbar {width:8px; background: #e0c3fc;}
+    ::-webkit-scrollbar-thumb {background: #ea38ec; border-radius: 5px;}
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html">Welcome</a>
+  <a href="wishes.html">Wishes</a>
+  <a href="gallery.html">Gallery</a>
+</nav>
+
+<div class="container">
+  <h1 style="text-align:center; color:#8ec5fc;">Memories with Aastha Didi 🎈</h1>
+  <div class="gallery">
+    <!-- Apni images ke path set karein (img folder banayein) -->
+    <img src="aaa.jpg"</img>
+    <img src="bbb.jpg"</img>
+    <img src="nnn.jpg"</img>
+	<img src="aastha4.jpg"</img>
+	<img src="aastha5.jpg"</img>
+	<img src="ccc.jpg"</img>
+    <!-- Aur images yahan add kar sakte hain -->
+  </div>
+  <p style="color:#888;text-align:center;font-size:1.1em; margin-top:1.2em;">
+  </p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday Aastha Didi</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+      min-height: 100vh;
+      color: #333;
+      overflow-x: hidden;
+    }
+    nav {
+      width: 100%;
+      background: rgba(255,255,255,0.8);
+      padding: 15px 0;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+      text-align: center;
+      position: sticky; top: 0;
+    }
+    nav a {
+      margin: 0 24px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #613a88;
+      font-size: 1.2em;
+      letter-spacing: 1px;
+      transition: color 0.2s;
+    }
+    nav a:hover {
+      color: #ea38ec;
+      text-shadow: 0 0 8px #ea38ec88;
+    }
+    .glow-text {
+      font-size: 3em;
+      color: #fff;
+      text-align: center;
+      margin-top: 14vh;
+      letter-spacing: 2px;
+      text-shadow:
+        0 0 10px #ea38ec,
+        0 0 20px #ea38ec,
+        0 0 40px #fca311;
+      font-family: 'Montserrat', cursive, sans-serif;
+    }
+    .glowing-animation {
+      animation: glow 2s infinite alternate;
+    }
+    @keyframes glow {
+      0% {
+        text-shadow:
+          0 0 10px #ea38ec,
+          0 0 20px #8ec5fc,
+          0 0 40px #e0c3fc;
+        color: #fff;
+      }
+      100% {
+        text-shadow:
+          0 0 25px #fca311,
+          0 0 70px #ff43bc,
+          0 0 100px #da0ebe;
+        color: #ffe7fb;
+      }
+    }
+    .btn {
+      margin-top: 40px;
+      background: linear-gradient(90deg, #be33fc, #43eaff 100%);
+      color: #fff;
+      padding: 15px 45px;
+      font-size: 1.3em;
+      border: none;
+      border-radius: 24px;
+      cursor: pointer;
+      letter-spacing: 2px;
+      box-shadow: 0 0 60px #ea38ec99, 0 4px 16px #e5d4ef;
+      transition: background 0.3s;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .btn:hover {
+      background: linear-gradient(90deg, #ea38ec, #fc8bb5 100%);
+      box-shadow: 0 0 80px #ea38ecaa;
+    }
+    p.creator {
+      text-align: center;
+      color: #ea38ec;
+      font-size: 1.5em;
+      margin-top: 12px;
+      font-weight: 600;
+      font-family: 'Montserrat', cursive, sans-serif;
+    }
+    ::-webkit-scrollbar {width:8px; background: #e0c3fc;}
+    ::-webkit-scrollbar-thumb {background: #ea38ec; border-radius: 5px;}
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html">Welcome</a>
+  <a href="wishes.html">Wishes</a>
+  <a href="gallery.html">Gallery</a>
+</nav>
+
+<h1 class="glow-text"></h1>
+<p class="creator">Created with ❤️ by Harshh</p>
+<div style="text-align:center;">
+  <a href="wishes.html" class="btn">See Birthday Wishes</a>
+</div>
+
+<!-- Audio element for song.mp3 (autoplay on user interaction) -->
+<audio id="birthdaySong" src="song.mp3" loop></audio>
+
+<script>
+  // Animated glowing text
+  const text = "HAPPY BIRTHDAY AASTHA DIDI";
+  const container = document.querySelector('.glow-text');
+  let index = 0;
+  function animateText() {
+    if (index < text.length) {
+      container.textContent += text[index];
+      index++;
+      setTimeout(animateText, 120);
+    } else {
+      container.classList.add('glowing-animation');
+    }
+  }
+  container.textContent = "";
+  animateText();
+
+  // Try autoplay on page load (may fail due to browser)
+  window.onload = function() {
+    const audio = document.getElementById('birthdaySong');
+    audio.play().catch(() => {});
+  };
+
+  // Play audio on user interaction (click/touch)
+  document.body.addEventListener('click', () => {
+    const audio = document.getElementById('birthdaySong');
+    if(audio.paused){
+      audio.play();
+    }
+  }, {once:true});
+
+  document.body.addEventListener('touchstart', () => {
+    const audio = document.getElementById('birthdaySong');
+    if(audio.paused){
+      audio.play();
+    }
+  }, {once:true});
+</script>
+
+</body>
+</html>

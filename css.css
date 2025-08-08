@@ -1,0 +1,99 @@
+.glow-text {
+  font-size: 3em;
+  color: #fff;
+  text-align: center;
+  margin-top: 14vh;
+  letter-spacing: 2px;
+  text-shadow:
+    0 0 10px #ea38ec,
+    0 0 20px #ea38ec,
+    0 0 40px #fca311;
+  animation: glow 2s infinite alternate;
+  font-family: 'Montserrat', cursive, sans-serif;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow:
+      0 0 10px #ea38ec,
+      0 0 20px #8ec5fc,
+      0 0 40px #e0c3fc;
+    color: #fff;
+  }
+  100% {
+    text-shadow:
+      0 0 25px #fca311,
+      0 0 70px #ff43bc,
+      0 0 100px #da0ebe;
+    color: #ffe7fb;
+  }
+}
+.btn {
+  margin-top: 40px;
+  background: linear-gradient(90deg, #be33fc, #43eaff 100%);
+  color: #fff;
+  padding: 15px 45px;
+  font-size: 1.3em;
+  border: none;
+  border-radius: 24px;
+  cursor: pointer;
+  letter-spacing: 2px;
+  box-shadow: 0 0 60px #ea38ec99, 0 4px 16px #e5d4ef;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: linear-gradient(90deg, #ea38ec, #fc8bb5 100%);
+  box-shadow: 0 0 80px #ea38ecaa;
+}
+
+/* Page container */
+.container {
+  max-width: 900px;
+  margin: 2.5em auto;
+  padding: 2.5em;
+  background: rgba(255,255,255,0.90);
+  border-radius: 32px;
+  box-shadow: 0 10px 44px #ea38ec22;
+}
+
+/* Wishes Card */
+.wish-card {
+  background: linear-gradient(120deg, #e0c3fc 80%, #ffbcfcb0 100%);
+  margin-bottom: 20px;
+  border-radius: 22px;
+  padding: 26px 32px;
+  font-size: 1.3em;
+  color: #333;
+  box-shadow: 0 5px 40px #ea38ec11;
+  transition: transform 0.2s;
+}
+
+.wish-card:hover {
+  transform: scale(1.025);
+  background: linear-gradient(120deg, #ea38eca0 70%, #8ec5fc90 100%);
+  color: #fff;
+}
+
+/* Gallery */
+.gallery {
+  display: grid;
+  gap: 28px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  margin-top: 22px;
+}
+.gallery img {
+  width: 100%;
+  border-radius: 20px;
+  min-height: 300px;
+  object-fit: cover;
+  box-shadow: 0 4px 44px #be33fc2e;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.gallery img:hover {
+  transform: scale(1.045);
+  box-shadow: 0 8px 64px #ea38ec81;
+}
+
+::-webkit-scrollbar {width:8px; background: #e0c3fc;}
+::-webkit-scrollbar-thumb {background: #ea38ec; border-radius: 5px;}
